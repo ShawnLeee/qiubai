@@ -128,6 +128,83 @@ div
 	text-decoration: none;
 	color: #999;
 }
+.action-bar .up a i
+{
+	background-image: url(../img/icongroup.png);
+	background-position: 0 -199px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+}
+.action-bar .down a i
+{
+	background-image: url(../img/icongroup.png);
+	background-position: 0 -223px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+
+}
+
+.action-bar .comment a i
+{
+	background-image: url(../img/icongroup.png);
+	background-position: 0 -175px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+
+}
+.share-bar a
+{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	text-indent: -9999px;
+	background-image: url(../img/icongroup.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.share-bar 
+{
+	float: right;
+}
+.share-bar .share-wechat
+{
+	background-position: 0 -79px;
+}
+.share-bar .share-qq
+{
+	background-position: 0 -151px;
+}
+.share-bar .share-qzone
+{
+	background-position: 0 -127px;
+}
+.share-bar .share-weibo
+{
+	background-position: 0 -103px;
+}
+.action-bar 
+{
+	float: left;
+}
+.action-bar ul li
+{
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	list-style: none;
+}
+.action-bar ul
+{
+	padding: 0;
+	margin: 5px 0 0 8px;
+}
 a
 {
 	text-decoration: none;
