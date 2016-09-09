@@ -7,7 +7,7 @@ $(document).ready(function(){
 })
 function get_article_detail(article_id, completion)
 {
-	$.getJSON("http://127.0.0.1:5000/api/v1.0/article/",{article_id: article_id},function(data){
+	$.getJSON("http://52.43.221.136/api/v1.0/article/",{article_id: article_id},function(data){
 			completion(data.data);
 	})
 }
