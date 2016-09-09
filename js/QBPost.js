@@ -1,6 +1,23 @@
+$.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
 function QBPost(post){
 	user = post.user;
 
+	this.post_id = post.post_id;
 	this.user_name = user.user_name;
 	this.user_img = user.avatar;
 
@@ -17,5 +34,19 @@ function QBCell(qb_post)
 	$(cell).find(".qb-content").find("p").text(qb_post.post_text);
 	$(cell).find(".stats-vote").find("i").text(qb_post.like_count);
 	$(cell).find(".stats-comment").find("i").text(qb_post.comment_count);
+
+	$(cell).find(".qb-content").find("p").click(function(){
+		var detailurl =  "article_detail.html?article_id=" + qb_post.post_id;
+		window.open(detailurl);
+	})
+	return cell;
+}
+function CommentCell(comment)
+{
+	var cell = $("<div class=\"comment-block clearfix\"> <div class=\"avatars\"><a href=\"#\"><img></a> </div> <div class=\"reply\"> <a href=\"\" class=\"userlogin\"></a> <span></span> </div> </div>");
+	$(cell).find(".avatars").find("img").attr("src", comment.user.avatar);
+	$(cell).find(".reply").find("a").text(comment.user.user_name);
+	$(cell).find(".reply").find("span").text(comment.comment_text);
+
 	return cell;
 }

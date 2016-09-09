@@ -1,0 +1,22 @@
+body
+{
+	text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: 'liga','kern';
+    font-family: PingHei,"PingFang SC","Helvetica Neue",Helvetica,STHeitiSC-Light,"Microsoft YaHei",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    background: #f7f7f7;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+body a,
+{
+}
+a,a:hover
+{
+	text-decoration: none;
+	color: #9b8878;
+}
